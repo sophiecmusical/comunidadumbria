@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".SettingsActivity">
+
+    <android.support.v7.preference.SwitchPreferenceCompat
+        android:defaultValue="false"
+        android:key="ckeditor"
+        android:summary="Editor complejo, con botones integrados (negritas, cursivas, etc.). Esta opción cambia algunos aspectos de estilo de la app. Recuerda que puedes conseguir lo mismo con etiquetas HTML en el editor simple"
+        android:title="Usar CKEditor" />
+
+    <android.support.v7.preference.EditTextPreference
+        android:key="user"
+        android:title="Guardar usuario"
+        android:summary="Para iniciar sesión más rápido. Quedará almacenado en tu teléfono y se rellenará cuando tengas que iniciar sesión"
+        android:dialogMessage="Introduce tu usuario. Quedará almacenado en tu teléfono y se rellenará cuando tengas que iniciar sesión"
+        android:defaultValue="" />
+
+    <android.support.v7.preference.EditTextPreference
+        android:key="pass"
+        android:title="Guardar contraseña"
+        android:summary="Quedará almacenada en tu teléfono. No la enviamos a ningún sitio."
+        android:dialogMessage="Introduce tu contraseña"
+        android:inputType="textPassword"
+        android:defaultValue="" />
+
+</android.support.v7.preference.PreferenceScreen>
